@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Build
+.stencil
+dist
+temp
+www
+loader
+build
+coverage
+storybook-static
+stencil.config.ts

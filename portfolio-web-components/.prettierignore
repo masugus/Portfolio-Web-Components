@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+
+# Compiled
+.stencil
+dist
+temp
+www
+loader
+build
+coverage
+storybook-static
