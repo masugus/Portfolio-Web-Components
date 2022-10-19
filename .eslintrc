@@ -1,0 +1,39 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:@stencil/recommended"],
+  "plugins": ["jest", "@typescript-eslint"],
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "no-console": 2,
+    "@stencil/strict-boolean-conditions": 0,
+    /**
+     * Changed that rule due to the following prettier discussions
+     * - https://github.com/prettier/prettier/issues/2613
+     * - https://github.com/prettier/prettier/issues/4924
+     **/
+    "@stencil/decorators-style": [
+      "error",
+      {
+        "event": "multiline"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "varsIgnorePattern": "h|Host",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ]
+  }
+}

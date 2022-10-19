@@ -1,0 +1,69 @@
+{
+  "name": "portfolio-web-components",
+  "version": "0.0.1",
+  "description": "Portfolio's Frontend Library",
+  "author": {
+    "name": "Alberto Masogo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masugus/Portfolio-Web-Components.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "keywords": [
+    "typescript",
+    "design system",
+    "portfolio",
+    "stencil"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/portfolio-web-components/portfolio-web-components.esm.js",
+  "engines": {
+    "node": ">=14.5.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "audit": "npm audit",
+    "audit_fix": "npm audit fix",
+    "prepare": "husky install && node .bin/prepare-dependencies.js",
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "lint": "eslint .",
+    "package": "npm pack",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^2.13.0",
+    "@stencil/eslint-plugin": "0.3.1",
+    "@stencil/sass": "1.4.1",
+    "@storybook/addon-a11y": "6.3.9",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-links": "6.3.9",
+    "@storybook/web-components": "^6.5.12",
+    "@types/jest": "^27.0.3",
+    "@types/node": "15.6.1",
+    "@types/react": "17.0.8",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
+    "@typescript-eslint/parser": "4.25.0",
+    "eslint": "7.27.0",
+    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-react": "7.23.2",
+    "husky": "6.0.0",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "puppeteer": "^10.0.0",
+    "typescript": "4.2.4"
+  },
+  "license": "MIT"
+}
